@@ -1,0 +1,7 @@
+abstract;
+//strict ( 2 );
+
+define behavior for zrk_a_miro_park_in //alias <alias_name>
+{
+//field( mandatory ) posting_date_by_user;
+}

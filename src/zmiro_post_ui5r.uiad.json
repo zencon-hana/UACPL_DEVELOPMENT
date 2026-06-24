@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Post Vendor Invoices",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Post Vendor Invoices"
+  },
+  "ui5AppDetails": {
+    "appId": "zmiropost"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_0AA3F2A4C95135395DDC533FC8BD4732D2901E0F_TM",
+    "semanticObject": "MIRO",
+    "action": "POST",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_0AA3F2A4C95135395DDC533FC8BD4732D2901E0F_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Post Vendor Invoices"
+      }
+    }
+  ]
+}

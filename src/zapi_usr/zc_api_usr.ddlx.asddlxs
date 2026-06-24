@@ -1,0 +1,23 @@
+@Metadata.layer: #CUSTOMER
+@UI.headerInfo:{ typeName: 'API User',
+                 typeNamePlural: 'API Users',
+                 title: { type: #STANDARD, value: 'ApiUser' } }
+annotate entity ZC_API_USR with
+{
+  @UI.facet: [{ id: 'idAPIUSR',
+                    type: #IDENTIFICATION_REFERENCE,
+                    position: 10,
+                    label: 'API user' }]
+
+  @UI: { lineItem: [{ position: 10, importance: #HIGH }],
+       identification: [{ position: 10, label: 'API User' }],
+       selectionField: [{ position: 10 }] }
+  ApiUser;
+  @UI: { lineItem: [{ position: 20, importance: #HIGH }],
+       identification: [{ position: 20, label: 'System id' }] }
+  Sysid;
+  @UI: { lineItem: [{ position: 30, importance: #HIGH }],
+       identification: [{ position: 30, label: 'Password' }] }
+  Password;
+
+}

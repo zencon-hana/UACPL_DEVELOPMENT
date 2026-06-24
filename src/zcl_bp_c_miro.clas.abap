@@ -1,0 +1,9 @@
+CLASS zcl_bp_c_miro DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zc_miro.
+protected section.
+private section.
+ENDCLASS.
+
+
+
+CLASS ZCL_BP_C_MIRO IMPLEMENTATION.
+ENDCLASS.

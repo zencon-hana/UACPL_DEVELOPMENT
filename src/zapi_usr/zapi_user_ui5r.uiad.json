@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Maintain User for API",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Maintain User for API"
+  },
+  "ui5AppDetails": {
+    "appId": "zapiuser.zapiuser"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_CE48E1CDF6805D4D9D59ED30311E63DC6242E1B0_TM",
+    "semanticObject": "zapi_user",
+    "action": "post",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_CE48E1CDF6805D4D9D59ED30311E63DC6242E1B0_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Maintain User for API"
+      }
+    }
+  ]
+}

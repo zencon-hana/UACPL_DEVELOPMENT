@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Maintain Taxcode Percentage",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Maintain Taxcode Percentage"
+  },
+  "ui5AppDetails": {
+    "appId": "ztaxcode"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_6DD58829F8A17905CC144F58F3C13A48A463DF98_TM",
+    "semanticObject": "ZTAX_CODE",
+    "action": "POST",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_6DD58829F8A17905CC144F58F3C13A48A463DF98_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Maintain Taxcode Percentage"
+      }
+    }
+  ]
+}

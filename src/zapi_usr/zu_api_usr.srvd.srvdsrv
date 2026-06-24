@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service def for ZC_API_USR'
+define service ZU_API_USR {
+  expose ZC_API_USR;
+}

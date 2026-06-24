@@ -1,0 +1,107 @@
+@EndUserText.label: 'Projection view on ZC_MIRO'
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@Metadata.allowExtensions: true
+define root view entity ZC_MIRO_POST_P
+  provider contract transactional_query
+  as projection on ZC_MIRO
+{
+  key PurchaseOrder,
+  key PurchaseOrderItem,
+  key AccountAssignmentNumber,
+  key PurchasingHistoryDocumentType,
+  key PurchasingHistoryDocumentYear,
+  key PurchasingHistoryDocument,
+  key PurchasingHistoryDocumentItem,
+  key ServiceEntrySheet,
+  key ServiceEntrySheetItem,
+  key SupplierInvoice,
+  key FiscalYear,
+  key WithholdingTaxCode,
+  key WithholdingTaxType,
+      DocumentReferenceID,
+      DocumentDate,
+      ReferenceDocument,
+      //      ReferenceDocumentFiscalYear,
+      ReferenceDocumentItem,
+      PostingDate,
+      Material,
+      MaterialDescription,
+      Plant,
+      ConsumptionTaxCtrlCode,
+      GoodsMovementType,
+      QuantityInDeliveryQtyUnit,
+      DeliveryQuantityUnit,
+      Quantity,
+      //      QtyInPurchaseOrderPriceUnit,
+      //      PurOrdAmountInCompanyCodeCrcy,
+      Currency,
+      PurchaseOrderQuantityUnit,
+      //      OrderPriceUnit,
+      //      CompanyCodeCurrency,
+      PurchaseOrderItemCategory,
+      PurgDocItemCategoryName,
+      //      PurchaseOrderItemText,
+      NetPriceAmount,
+      PurchaseOrderAmount,
+      NetPriceQuantity,
+      //      AccountAssignmentCategory,
+      IN_AccumulationAmount,
+      IN_ThresholdAmount,
+      IN_ThresholdAmountDiff,
+      //      ItemPurchaseOrderCategory,
+      TaxCode,
+      StorageLocation,
+      //      ItemDocumentCurrency,
+      //      ItemOrderPriceUnit,
+      //      PurchasingDocumentCategory,
+      PaymentTerms,
+      CompanyCode,
+      Supplier,
+      SupplierName,
+      //      short,
+      secco,
+      MaterialDocument,
+      MaterialDocumentItem,
+      MaterialDocumentYear,
+      //      MatdQuantityInDeliveryQtyUnit,
+      //      MatdDeliveryQuantityUnit,
+      //      QuantityInEntryUnit,
+      //      EntryUnit,
+      //      MatdQtyInPOPriceUnit,
+      //      MatdOrderPriceUnit,
+      SupplierInvoiceItem,
+      AssignmentReference,
+      SupplierInvoiceStatus,
+      SupplierInvoiceStatusNum,
+      //      SupplierInvoiceIDByInvcgParty,
+      SupplierInvDocumentDate,
+      @EndUserText.label: 'CGST rate'
+      cgst_rate,
+      @EndUserText.label: 'CGST value'
+      cgst_value,
+      @EndUserText.label: 'SGST rate'
+      sgst_rate,
+      @EndUserText.label: 'SGST value'
+      sgst_value,
+      @EndUserText.label: 'IGST rate'
+      igst_rate,
+      @EndUserText.label: 'IGST value'
+      igst_value,
+      @EndUserText.label: 'Total amount'
+      totalAmount,
+      CostCenter,
+      CostCenterDescription,
+      GLAccount,
+      AssetNo,
+      FixedAssetDescription,
+          
+      /* Associations */
+      _CompanyCode,
+      _MaterialDocumentItem,
+      _PaymentTerms,
+      //      _PurchasingDocumentCategory,
+      //      _PurgDocumentCategory,
+      _PurgDocumentItemCategory
+}
+where
+  SupplierInvoice <> ''

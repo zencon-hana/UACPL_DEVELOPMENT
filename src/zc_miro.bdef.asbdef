@@ -1,0 +1,22 @@
+unmanaged implementation in class zcl_bp_c_miro unique;
+strict ( 2 );
+
+define behavior for ZC_MIRO //alias <alias_name>
+//persistent table <???>
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  //  create;
+  //  update;
+  //  delete;
+
+  field ( readonly ) PurchaseOrder, PurchaseOrderItem, AccountAssignmentNumber, PurchasingHistoryDocumentType,
+  PurchasingHistoryDocumentYear, PurchasingHistoryDocument, PurchasingHistoryDocumentItem, FISCALYEAR, SUPPLIERINVOICE, SERVICEENTRYSHEET, ServiceEntrySheetItem,
+  WithholdingTaxCode, WithholdingTaxType;
+  action ( precheck ) ParkInvoice parameter zrk_a_miro_park_in result [0..*] $self { default function GetDefaultsForParkInvoice; }
+  //  function get_default_posting_date result [0..*] zrk_a_miro_park_in;
+  action ( precheck ) PostInvoice result [0..*] $self;
+
+  action CalcAndShowTotal result [0..*] $self;
+}

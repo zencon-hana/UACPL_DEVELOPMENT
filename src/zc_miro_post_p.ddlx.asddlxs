@@ -1,0 +1,197 @@
+@Metadata.layer: #CUSTOMER
+@UI.headerInfo:{ typeName: 'MIRO utility',
+                 typeNamePlural: 'MIRO utilities',
+                 title: { type: #STANDARD, value: 'PurchaseOrder' } }
+annotate entity ZC_MIRO_POST_P with
+{
+  @UI.facet: [{ id: 'idPODetail',
+                    type: #IDENTIFICATION_REFERENCE,
+                    position: 10,
+                    label: 'PO detail' }]
+
+  @UI: { lineItem: [{ position: 10, importance: #HIGH },
+  //                    { type: #FOR_ACTION, position: 10, dataAction: 'ParkInvoice', label:'Park Invoice', invocationGrouping: #CHANGE_SET }
+                    { type: #FOR_ACTION, position: 20, dataAction: 'PostInvoice', label:'Post Invoice', invocationGrouping: #CHANGE_SET }
+                   ],
+       identification: [{ position: 10, label: 'Purchase order' }],
+       selectionField: [{ position: 10 }] }
+  PurchaseOrder;
+
+  @UI: { lineItem: [{ position: 20, importance: #HIGH }],
+         identification: [{ position: 20, label: 'Purchase order Item' }] }
+  PurchaseOrderItem;
+
+  @UI: { lineItem: [{ position: 21, importance: #HIGH }, { type: #FOR_INTENT_BASED_NAVIGATION, semanticObjectAction: 'displayAdvanced' }],
+         identification: [{ position: 21, label: 'Bill Passing number' }] }
+  SupplierInvoice;
+
+  @UI: { lineItem: [{ position: 22, importance: #HIGH }],
+         identification: [{ position: 22, label: 'Bill Passing Item' }] }
+  SupplierInvoiceItem;
+
+  @UI: { lineItem: [{ position: 23, importance: #HIGH }],
+         identification: [{ position: 23, label: 'Bill Passing status' }] }
+  SupplierInvoiceStatus;
+
+  @UI: { lineItem: [{ position: 24, importance: #HIGH }],
+       identification: [{ position: 24, label: 'Service entry sheet' }] }
+  ServiceEntrySheet;
+
+  @UI: { lineItem: [{ position: 25, importance: #HIGH }],
+         identification: [{ position: 25, label: 'Service entry sheet item' }] }
+  ServiceEntrySheetItem;
+
+  @UI: { lineItem: [{ position: 30, importance: #HIGH }],
+         identification: [{ position: 30, label: 'Material' }] ,
+         selectionField: [{ position: 20 }] }
+  Material;
+
+  @UI: { lineItem: [{ position: 31, importance: #HIGH }],
+         identification: [{ position: 31, label: 'Material Description' }] }
+  MaterialDescription;
+
+  @UI: { lineItem: [{ position: 32, importance: #HIGH }],
+         identification: [{ position: 32, label: 'HSN Code' }] }
+  ConsumptionTaxCtrlCode;
+
+  @UI: { lineItem: [{ position: 40, importance: #HIGH }],
+         identification: [{ position: 40, label: 'Company code' }],
+         selectionField: [{ position: 30 }] }
+  CompanyCode;
+
+  @UI: { lineItem: [{ position: 50, importance: #HIGH }],
+         identification: [{ position: 50, label: 'Goods movement type' }] }
+  GoodsMovementType;
+
+  @UI: { lineItem: [{ position: 51, importance: #HIGH }],
+         identification: [{ position: 51, label: 'Supplier' }] }
+  Supplier;
+
+  @UI: { lineItem: [{ position: 52, importance: #HIGH }],
+      identification: [{ position: 52, label: 'Supplier' }] }
+  SupplierName;
+
+  @UI: { lineItem: [{ position: 60, importance: #HIGH }],
+         identification: [{ position: 60, label: 'Quantity' }] }
+  Quantity;
+
+  @UI: { lineItem: [{ position: 70, importance: #HIGH }],
+         identification: [{ position: 70, label: 'Basic value' }] }
+  PurchaseOrderAmount;
+  //  @UI: { lineItem: [{ position: 70, importance: #HIGH }],
+  //         identification: [{ position: 70, label: 'Net price amount' }] }
+  //  NetPriceAmount;
+
+  @UI: { lineItem: [{ position: 71, importance: #HIGH }],
+         identification: [{ position: 71, label: 'CGST rate' }] }
+  cgst_rate;
+  @UI: { lineItem: [{ position: 72, importance: #HIGH }],
+         identification: [{ position: 72, label: 'CGST Value' }] }
+  cgst_value;
+  @UI: { lineItem: [{ position: 73, importance: #HIGH }],
+     identification: [{ position: 73, label: 'SGST rate' }] }
+  sgst_rate;
+  @UI: { lineItem: [{ position: 74, importance: #HIGH }],
+     identification: [{ position: 74, label: 'SGST value' }] }
+  sgst_value;
+  @UI: { lineItem: [{ position: 75, importance: #HIGH }],
+     identification: [{ position: 75, label: 'IGST rate' }] }
+  igst_rate;
+  @UI: { lineItem: [{ position: 76, importance: #HIGH }],
+     identification: [{ position: 76, label: 'IGST value' }] }
+  igst_value;
+  @UI: { lineItem: [{ position: 77, importance: #HIGH }],
+     identification: [{ position: 77, label: 'Total amount' }] }
+  totalAmount;
+
+  @UI: { lineItem: [{ position: 78, importance: #HIGH }],
+       identification: [{ position: 78, label: 'Accumulated amount' }] }
+  IN_AccumulationAmount;
+
+  @UI: { lineItem: [{ position: 79, importance: #HIGH }],
+         identification: [{ position: 79, label: 'Exem threshold amt.' }] }
+  IN_ThresholdAmount;
+
+  @UI: { lineItem: [{ position: 80, importance: #HIGH }],
+     identification: [{ position: 80, label: 'Threshold diff. amount' }] }
+  IN_ThresholdAmountDiff;
+
+  @UI: { lineItem: [{ position: 81, importance: #MEDIUM }],
+         identification: [{ position: 81, label: 'Net price quantity' }] }
+  NetPriceQuantity;
+
+  @UI: { lineItem: [{ position: 82, importance: #MEDIUM }],
+       identification: [{ position: 82, label: 'Withholding tax code' }] }
+  WithholdingTaxCode;
+
+  @UI: { lineItem: [{ position: 83, importance: #MEDIUM }],
+         identification: [{ position: 83, label: 'Withholding tax type' }] }
+  WithholdingTaxType;
+
+  @UI: { lineItem: [{ position: 90, importance: #MEDIUM }],
+         identification: [{ position: 90, label: 'Account assignment no.' }] }
+  AccountAssignmentNumber;
+
+  @UI: { lineItem: [{ position: 100, importance: #MEDIUM }],
+         identification: [{ position: 100, label: 'PO history Doc. type' }] }
+  PurchasingHistoryDocumentType;
+
+  @UI: { lineItem: [{ position: 110, importance: #MEDIUM }],
+         identification: [{ position: 110, label: 'PO history doc. year' }] }
+  PurchasingHistoryDocumentYear;
+
+  @UI: { lineItem: [{ position: 120, importance: #MEDIUM }],
+         identification: [{ position: 120, label: 'PO history Doc.' }] }
+  PurchasingHistoryDocument;
+
+  @UI: { lineItem: [{ position: 130, importance: #MEDIUM }],
+         identification: [{ position: 130, label: 'PO history Doc. Item' }] }
+  PurchasingHistoryDocumentItem;
+
+  @UI: { lineItem: [{ position: 140, importance: #MEDIUM }],
+         identification: [{ position: 140, label: 'Vendor invoice no.' }] }
+  DocumentReferenceID;
+
+  @UI: { lineItem: [{ position: 150, importance: #MEDIUM }],
+         identification: [{ position: 150, label: 'Document date' }] }
+  DocumentDate;
+
+  @UI: { lineItem: [{ position: 160, importance: #MEDIUM }],
+         identification: [{ position: 160, label: 'Posting date' }] }
+  PostingDate;
+
+  @UI: { lineItem: [{ position: 170, importance: #MEDIUM }],
+         identification: [{ position: 170, label: 'Cost center' }] }
+  CostCenter;
+  
+  @UI: { lineItem: [{ position: 171, importance: #MEDIUM }],
+         identification: [{ position: 171, label: 'Cost center desc.' }] }
+  CostCenterDescription;
+
+  @UI: { lineItem: [{ position: 180, importance: #MEDIUM }],
+         identification: [{ position: 180, label: 'GL account' }] }
+  GLAccount;
+  
+  @UI: { lineItem: [{ position: 190, importance: #MEDIUM }],
+         identification: [{ position: 190, label: 'Asset no' }] }
+  AssetNo;
+  
+  @UI: { lineItem: [{ position: 191, importance: #MEDIUM }],
+         identification: [{ position: 191, label: 'Asset no desc.' }] }
+  FixedAssetDescription;
+
+  //  @UI: { lineItem: [{ position: 160, importance: #MEDIUM }],
+  //         identification: [{ position: 160, label: 'Reference document' }] }
+  //  ReferenceDocument;
+  //
+  //  @UI: { lineItem: [{ position: 170, importance: #MEDIUM }],
+  //         identification: [{ position: 170, label: 'Purchase order Item' }] }
+  //  ReferenceDocumentItem;
+  //
+  //  @UI: { lineItem: [{ position: 180, importance: #MEDIUM }],
+  //         identification: [{ position: 180, label: 'Ref. Doc. fiscal year' }] }
+  //  ReferenceDocumentFiscalYear;
+
+
+
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition for MIRO posting'
+define service ZSERVDEF_C_MIRO_POST_P {
+  expose ZC_MIRO_POST_P;
+}

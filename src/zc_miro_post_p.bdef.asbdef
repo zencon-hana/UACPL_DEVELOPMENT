@@ -1,0 +1,9 @@
+projection;
+strict ( 2 );
+with managed instance filter;
+define behavior for ZC_MIRO_POST_P //alias <alias_name>
+{
+
+//  use action ParkInvoice;
+  use action PostInvoice;
+}

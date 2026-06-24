@@ -1,0 +1,12 @@
+projection;
+strict ( 2 );
+
+define behavior for ZC_MIRO_P //alias <alias_name>
+{
+
+  use action ParkInvoice;
+  use action CalcAndShowTotal;
+
+  use function GetDefaultsForParkInvoice;
+  //  use action PostInvoice;
+}

@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Park Vendor Invoices",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Park Vendor Invoices"
+  },
+  "ui5AppDetails": {
+    "appId": "zmiropark"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_2FB10E0BF5016161EE54AB7E03C29FB38DAA23AA_TM",
+    "semanticObject": "MIRO",
+    "action": "PARK",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_2FB10E0BF5016161EE54AB7E03C29FB38DAA23AA_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Park Vendor Invoices"
+      }
+    }
+  ]
+}
